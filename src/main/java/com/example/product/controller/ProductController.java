@@ -17,6 +17,16 @@ public class ProductController {
         model.addAttribute("products",productService.getAll());
         return "getAll";
     }
+    @GetMapping("/sortASC")
+    public String sortASC(Model model){
+        model.addAttribute("products",productService.sortASC());
+        return "sortASC";
+    }
+    @GetMapping("/sortDESC")
+    public String sortDESC(Model model){
+        model.addAttribute("products",productService.sortDESC());
+        return "sortDESC";
+    }
     @GetMapping("/product/{id}")
     public String getById(@PathVariable int id, Model model){
         model.addAttribute("product",productService.getById(id));

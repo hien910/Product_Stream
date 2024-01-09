@@ -29,21 +29,21 @@
     </style>
 </head>
 <body>
-<h1 style="text-align: center">Danh sách tất cả các sản phẩm</h1>
+<h1 style="text-align: center">Danh sách tất cả các sản phẩm sắp xếp theo giá tăng dần</h1>
 <div style="color: burlywood; width: 250px; height: 120px" >
     <p style="color: darkblue"><button >
         <a th:href="@{http://localhost:8080/sortASC}">Sort</a>
-        </button> Sắp xếp theo giá tăng dần</p>
-    <p style="color: darkblue"><button>
+    </button> Sắp xếp theo giá tăng dần</p>
+    <p style="color: grey"><button>
         <a th:href="@{http://localhost:8080/sortDESC}">Sort</a>
-        </button> Sắp xếp theo giá giảm dần</p>
+    </button> Sắp xếp theo giá giảm dần</p>
 
 </div>
 
 <div class="container1">
     <div class="row">
         <div class="col-sm-2" th:each="product : ${products}">
-            <div class="container" th:onclick="|redirectToAnotherPage(${product.id})|">
+            <div class="container" >
                 <p th:text="${product.id}">
 
                 </p>
@@ -66,39 +66,7 @@
         </div>
     </div>
 </div>
-<br></br>
 
-
-<table border="1">
-    <thead>
-    <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>description </th>
-        <th>thumbnail</th>
-        <th>price</th>
-        <th>rating</th>
-        <th>priceDiscount</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="product : ${products}">
-        <td th:text="${product.id}">1</td>
-        <td th:text="${product.name}">An</td>
-        <td th:text="${product.description}">It</td>
-        <td th:text="${product.thumbnail}">male</td>
-        <td th:text="${product.price}">hanoi</td>
-        <td th:text="${product.rating}">2000</td>
-        <td th:text="${product.priceDiscount}">2000/09/11</td>
-    </tr>
-    </tbody>
-</table>
-<script th:inline="javascript">
-    function redirectToAnotherPage(id) {
-        // Chuyển hướng đến trang khác
-        window.location.href = 'http://localhost:8080/product/' +id;
-    }
-</script>
 <script th:src="@{/main.js}"></script>
 </body>
 </html>

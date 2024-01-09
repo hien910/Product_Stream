@@ -18,4 +18,10 @@ public class ProductService {
     public Product getById(int id){
         return productRepository.getById(id);
     }
+    public List<Product> sortASC(){
+        return productRepository.sortASC();
+    }
+    public List<Product> sortDESC(){
+        return productRepository.sortASC();
+    }
 }

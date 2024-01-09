@@ -5,10 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+        }
+    </style>
     <title>GetById</title>
 </head>
 <body>
-<h1 th:text="'Product có id '+${product.id} +'có thông tin '"></h1>
+<h1 th:text="'Product có id '+${product.id} +' có thông tin '"></h1>
 <table border="1">
     <thead>
     <tr>
@@ -33,6 +43,26 @@
     </tr>
     </tbody>
 </table>
+
+<div class="container" >
+    <p th:text="${product.id}">
+
+    </p>
+
+    <div class="text-center" style="align-items : center">
+        <img th:src="${product.thumbnail}" style="max-width: 200px; max-height: 200px"/>
+    </div>
+    <h3 class="text-center" th:text="${product.name}"></h3>
+    <div class="text-center">
+
+        <span  th:text="'$'+${product.price}"></span>
+        <del th:text="'$'+${product.priceDiscount}"></del>
+    </div>
+    <div class="text-center" >
+        <span  th:text="${product.rating}"></span>
+        <span> <i class="fa fa-star" style="color: #F5D224"></i> </span>
+    </div>
+</div>
 
 </body>
 </html>
