@@ -18,4 +18,4 @@ Mini project: Giới thiệu đồng hồ đeo tay.
 3. Trang lấy từng sản phẩm theo id
 - Có bảng thông số sản phẩm
 - Hình ảnh từng sản phẩm
-![](src/main/resources/image/getAll.png)
+![](src/main/resources/image/id.png)
