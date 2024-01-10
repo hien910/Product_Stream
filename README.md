@@ -11,11 +11,11 @@ Mini project: Giới thiệu đồng hồ đeo tay.
 
 2. Trang sắp xếp
   - Sắp xếp theo giá tăng dần
-  - ![](src/main/resources/image/sortASC.png)
+![](src/main/resources/image/sortASC.png)
   - Sắp xếp theo giá giảm dần
-  - ![](src/main/resources/image/sortDESC.png)
+![](src/main/resources/image/sortDESC.png)
 
 3. Trang lấy từng sản phẩm theo id
 - Có bảng thông số sản phẩm
 - Hình ảnh từng sản phẩm
-- ![](src/main/resources/image/getAll.png)
+![](src/main/resources/image/getAll.png)
