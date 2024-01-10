@@ -22,6 +22,6 @@ public class ProductService {
         return productRepository.sortASC();
     }
     public List<Product> sortDESC(){
-        return productRepository.sortASC();
+        return productRepository.sortDESC();
     }
 }

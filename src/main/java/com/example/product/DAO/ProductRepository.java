@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Repository
 public class ProductRepository implements ProductInterface{
@@ -20,14 +21,15 @@ public class ProductRepository implements ProductInterface{
     @Override
     public List<Product> sortDESC() {
         return ProductDB.productList.stream()
-               .sorted(Comparator.comparing(Product:: getPrice).reversed()).toList();
+                .sorted((p1, p2) -> Double.compare(p2.getPrice(), p1.getPrice()))
+                .toList();
     }
 
     @Override
     public List<Product> sortASC() {
         return ProductDB.productList.stream()
                 .sorted(Comparator.comparing(Product:: getPrice))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     @Override
