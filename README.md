@@ -3,7 +3,7 @@ Mini project: Giới thiệu đồng hồ đeo tay.
 
 ## Tổng quan:
 1. Trang chính
-- Hiện tên hình ảnh, tên, giá... của sản phẩm
+- Hiện hình ảnh, tên, giá... của sản phẩm
 - Có 2 nút để sắp xếp sản phẩm theo giá
 - Hình ảnh trang chính
 ![](src/main/resources/image/getAll.png)
